@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url("back.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  animation: animteBG 5s linear infinite;
+}
+
+@keyframes animteBG {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.login-box {
+  position: relative;
+  background: transparent;
+  height: 450px;
+  width: 400px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 290px;
+  border-bottom: 1px solid #fff;
+  margin: 5px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Poppins", Sans-serif;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 35px 0 10px;
+}
+
+.input-box .icon {
+  position: relative;
+  top: 32px;
+  left: 265px;
+  color: #fff;
+  font-size: 1em;
+  line-height: 50px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 33px;
+  left: 0;
+  transition: 0.5s;
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+  transform: translateY(-27px);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-family: "Poppins", Sans-serif;
+  font-size: 0.8em;
+}
+
+.remember-forgot label {
+  color: #fff;
+}
+
+.remember-forgot label input {
+  margin: 0 5px 3px 0;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.login-btn {
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.register-link {
+  text-align: center;
+  margin: 25px;
+  font-family: "Poppins", Sans-serif;
+  font-size: 1em;
+  color: #fff;
+}
+
+.register-link p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .login-box {
+    width: 100%;
+    height: 150vh;
+    border: none;
+    border-radius: 0;
+  }
+
+  .input-box {
+    width: 290px;
+  }
+}
